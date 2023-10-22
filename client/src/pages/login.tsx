@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import realestate from '../assets/realestate.png'
 import { CredentialResponse } from "../interfaces/google";
 
+const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID; 
 
 export const Login: React.FC = () => {
   const { mutate: login } = useLogin<CredentialResponse>();
@@ -23,7 +24,7 @@ export const Login: React.FC = () => {
       try {
         window.google.accounts.id.initialize({
           ux_mode: "popup",
-          client_id: "process.env.REACT_APP_GOOGLE_CLIENT_ID",
+          client_id: GOOGLE_CLIENT_ID,
           callback: async (res: CredentialResponse) => {
             if (res.credential) {
               login(res);
