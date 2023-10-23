@@ -42,6 +42,7 @@ const PropertyDetails = () => {
     const isCurrentUser = user.email === propertyDetails.creator.email;
 
     const handleDeleteProperty = () => {
+        // eslint-disable-next-line no-restricted-globals
         const response = confirm(
             "Are you sure you want to delete this property?",
         );
