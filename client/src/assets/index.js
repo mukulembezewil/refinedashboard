@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import yariga from './yariga.svg';
 
-export {
-  logo,
-  yariga,
-};
+import realestate from './realestate.png';
+
+export { logo, yariga, realestate };
